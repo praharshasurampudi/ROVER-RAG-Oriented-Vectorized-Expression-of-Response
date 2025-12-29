@@ -1,0 +1,9 @@
+langchain
+langchain-community
+chromadb
+flask
+pypdf
+beautifulsoup4
+sentence-transformers
+rank-bm25
+ollama

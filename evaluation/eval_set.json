@@ -1,0 +1,29 @@
+[
+  {
+    "id": "q1",
+    "query": "What is this document about?",
+    "expected_keywords": [
+      "AI Engineer",
+      "education",
+      "projects"
+    ]
+  },
+  {
+    "id": "q2",
+    "query": "What field does Praharsha work in?",
+    "expected_keywords": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Generative AI"
+    ]
+  },
+  {
+    "id": "q3",
+    "query": "What type of projects has Praharsha worked on?",
+    "expected_keywords": [
+      "RAG",
+      "Conversational AI",
+      "Machine Learning"
+    ]
+  }
+]
