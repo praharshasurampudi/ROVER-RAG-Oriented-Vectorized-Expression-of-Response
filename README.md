@@ -115,16 +115,31 @@ cd RAG
 
 ---
 
-### 2️⃣ Create Virtual Environment (Python 3.11)
+## 🐍 Python Environment Setup
+
+### macOS / Linux
 
 ```bash
 python3.11 -m venv venv
 source venv/bin/activate
 ```
 
+### Windows (PowerShell)
+
+```powershell
+py -3.11 -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+> ⚠️ If PowerShell blocks activation:
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
+
 ---
 
-### 3️⃣ Install Dependencies
+### Install Dependencies (All OS)
 
 ```bash
 pip install --upgrade pip
@@ -133,21 +148,29 @@ pip install -r requirements.txt
 
 ---
 
-### 4️⃣ Install & Start Ollama
+## 🤖 Ollama Setup (Local LLM)
 
-Install Ollama (macOS via Homebrew):
+### macOS
 
 ```bash
 brew install ollama
 ```
 
-Start the Ollama server:
+### Windows
+
+1. Download installer from:
+   👉 [https://ollama.com/download](https://ollama.com/download)
+2. Install and restart terminal
+
+---
+
+### Start Ollama Server
 
 ```bash
 ollama serve
 ```
 
-In a new terminal, pull the model:
+In a **new terminal**, pull the model:
 
 ```bash
 ollama pull llama3
@@ -155,7 +178,7 @@ ollama pull llama3
 
 ---
 
-### 5️⃣ Add Documents
+## 📄 Add Documents
 
 Place PDFs inside:
 
@@ -191,7 +214,7 @@ http://127.0.0.1:8000
 
 **POST** `/query`
 
-#### Example request:
+#### Example request
 
 ```bash
 curl -X POST http://127.0.0.1:8000/query \
@@ -199,7 +222,7 @@ curl -X POST http://127.0.0.1:8000/query \
   -d '{"query": "What is this document about?"}'
 ```
 
-#### Example response:
+#### Example response
 
 ```json
 {
@@ -219,7 +242,7 @@ curl -X POST http://127.0.0.1:8000/query \
   * Request ID
   * Latency
   * Retrieval metadata
-* Logs are emitted to stdout (Docker-friendly)
+* Logs are emitted to **stdout** (Docker-friendly)
 
 Example log:
 
@@ -255,22 +278,20 @@ Accuracy: 1.00
 Average Latency: 16.47s
 ```
 
-This allows **regression testing** and retrieval quality tracking over time.
+This enables **regression testing** and retrieval quality monitoring over time.
 
 ---
 
 ## 🛠️ Design Decisions
 
-* **Hybrid retrieval** improves factual grounding vs embeddings alone
-* **Strict prompt grounding** prevents hallucinations
-* **Local LLM (Ollama)** enables private, offline inference
-* **Offline evaluation** avoids subjective LLM-as-judge metrics
+* **Hybrid retrieval** improves grounding vs dense retrieval alone
+* **Strict prompt grounding** minimizes hallucinations
+* **Local LLM (Ollama)** ensures privacy and offline execution
+* **Offline evaluation** avoids subjective LLM-as-judge scoring
 
 ---
 
-
 ## 📄 License
 
-MIT License
 
 ---
