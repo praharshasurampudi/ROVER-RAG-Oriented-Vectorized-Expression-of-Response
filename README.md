@@ -2,8 +2,6 @@
 
 A **production-grade Retrieval-Augmented Generation (RAG) backend** that ingests documents, performs **hybrid dense + BM25 retrieval**, and serves grounded answers via a **Flask API** with **structured logging** and **offline evaluation**.
 
-This project is designed to demonstrate **real-world GenAI system design**, not a toy demo.
-
 ---
 
 ## 🔹 Key Features
@@ -109,7 +107,7 @@ RAG/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/praharshasurampudi/production-rag-text-knowledge-agent
 cd RAG
 ```
 
@@ -291,7 +289,6 @@ This enables **regression testing** and retrieval quality monitoring over time.
 
 ---
 
-## 📄 License
-
+## 📝 License © [Praharsha Surampudi](https://www.linkedin.com/in/praharsha-surampudi/)
 
 ---
