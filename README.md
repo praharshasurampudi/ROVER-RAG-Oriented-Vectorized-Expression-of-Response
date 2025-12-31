@@ -1,5 +1,5 @@
-#ROVER
-##RAG-Oriented-Vectorized-Expression-of-Response
+# ROVER
+## RAG-Oriented-Vectorized-Expression-of-Response
 
 A **production-grade Retrieval-Augmented Generation (RAG) backend** that ingests documents, performs **hybrid dense + BM25 retrieval**, and serves grounded answers via a **Flask API** with **structured logging** and **offline evaluation**.
 
